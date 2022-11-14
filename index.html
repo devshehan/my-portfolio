@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!--Introduction-->
+    <section class="intro" id="home">
+        <!--navigation bar top of the website and and logo-->
+        <header class="topofthepage">
+            <nav>
+                <p class="logo"><strong>Shehaan</strong> Avishka</p>
+                <ul>
+                    <li><a href="#contact">blogs</a></li>
+                    <li><a href="#aboutme">about</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1 class="section__title section__title--intro">
+            Software Developer
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">
+            <i class="material-icons" style="font-size:15px">place</i>
+            Ambalangoda, Sri Lanka
+        </p>
+        <a href="#work">
+            <input type="button" value="work" class="btn" name="introWorkButton">
+        </a>
+
+    </section>
+
+    <!--what i do-->
+    <section class="mywork" id="work">
+        <h2 class="section__title section__title--work">
+            What I do
+        </h2>
+        <div class="works">
+            <div class="work">
+                <h3>Development</h3>
+                <p class="para">
+                    'Youtube-Music bot' to play a favourite song, 'Discord Stress-ReliefLive-BOT ' for stress relief,
+                     Weather Application, Distance calculate between two cities simple script. Learning Python Selenium
+                     web-framework to build web automation.
+                    
+                </p>
+                <a href="#project">
+                    <input type="button" name="develomentButton" value="see" id="#project" class="btn">
+                </a>
+            </div>
+
+            <div class="work">
+                <h3>Problem Solving</h3>
+                <p class="para">In College, I learnt C and C++ languages in the first year and wanted to solve problems using machines.
+                    Have participated in IEEE ReidXtreme 16.1 Competitive Programming Contests.
+                    Competitive Programming is a mind sport and I am improving my problem-solving skills using online platforms.
+                </p>
+                <a href="#cp">
+                    <input type="button" name="competitiveProgrammingButton" value="see" class="btn">
+                </a>
+            </div>
+
+            <div class="work">
+                <h3>Designing</h3>
+                <p class="para">Designing Web User-Interfaces/UX using HTML, CSS, Java-Script, PHP. Learning how to build
+                    prototype for software using FIGMA. 
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--about me-->
+    <section class="about-me" id="aboutme">
+        <h2 class="section__title section__title--about">
+            Who am I
+        </h2>
+        <p class="section__subtitle section__subtitle--about">
+            Self-taught passionate programmer
+        </p>
+        <div class="about-me__body">
+            <p>I am Shehaan, passionate about Cyber Security, problem solving, learing Linux-Ubuntu operationg system. Web-development, Python automation.
+            </p>
+
+            <p>Second year Computer Science student in University Of Colombo School of Computing.
+                Did my GCE Advanced Level in Physical Science at Richmond College, Galle, Sri-Lanka.
+            </p>
+        </div>
+        <img src="images/facee.jpg" alt="myphoto-with-car" class="about-me__img">
+    </section>
+
+    <!--projects-->
+    <section class="projects" id="project">
+        <h2 class="section__title section__title--project">
+            My Work
+        </h2>
+        <p class="section__subtitle section__subtitle--project">what I have done</p>
+
+        <div class="portfolio">
+            <a href="#" class="portfolio__item">
+                <img src="images/weatherImage.png" alt="weatherAppImage" class="portfolio__image">
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="images/youtubeScript.jpg" alt="youtubeScriptImage" class="portfolio__image">
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="images/distanceBetweenTwocitites.jpg" alt="distanceBetweenTwocititesImage" class="portfolio__image">
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="images/temperatureConverter.jpg" alt="temperatureConverter" class="portfolio__image">
+            </a>
+        </div>
+    </section>
+
+
+
+    <!--problem solving detail area that linked form work i do section-->
+
+    <section class="detailbox" id="cp">
+        <p class="section__subtitle section__subtitle--detailbox">
+            Competitive Programmming
+        </p>
+        <div class="detailbox__body">
+            <p>In College I learnt C and C++ languages at the first year and wanted to solve problems using machines.
+                I got a chance to participate in the IEEE ReidXtreme 16.1 24 hours competitive programming contest
+                 with my colleagues.
+            </p>
+            <p>Use codeforces, hackerrank online platforms to imporve my skills and learning data structures and algorithms,
+                design alogorithms.
+            </p>
+        </div>
+        <img src="images/competitiveProgrammingImg.jpg" alt="photo problem solving" class="detailbox__img">
+    </section>
+
+
+    <!--Contact section-->
+    <section class="contact" id="contact">
+        <h3 class="contact__head">Contact Me</h3>
+
+        <div class="contact__wrapper">
+            <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fshehan.avishka.5030927" class="x">
+                <ion-icon name="logo-facebook" class="icon icon__facebook"></ion-icon>
+            </a>
+
+            <a href="linkedin.com/in/shehan-avishka-64a370239" class="x">
+                <ion-icon name="logo-linkedin" class="icon icon__linkedIn"></ion-icon>
+            </a>
+
+            <a href="https://github.com/shehaan-avishka" class="x">
+                <ion-icon name="logo-github" class="icon icon__github"></ion-icon>
+            </a>
+
+            <a href="https://medium.com/@shehaan.avishka00" class="x">
+                <ion-icon name="logo-medium" class="icon icon__medium"></ion-icon>
+            </a>
+            
+        </div>
+        
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --ff-primary: 'Source Sans Pro', 'sans-serif';
+    --ff-secondary: 'Source Code Pro', 'monospace';
+
+    --fw-reg : 300;
+    --fw-bold : 900;
+
+
+    --clr-light : #fff;
+    --clr-dark : #303030;
+    --clr-recent : #3aa1ae;
+
+    --fs-h1 : 3rem;
+    --fs-h2 : 2.25rem;
+    --fs-h3 : 1.25rem;
+    --fs-body : 1rem;
+}
+
+@media (min-width : 800px){
+    :root{
+        --fs-h1 : 4rem;
+        --fs-h2 : 3.75rem;
+        --fs-h3 : 1.5rem;
+        --fs-body : 1.2rem;
+    }
+}
+
+
+body{
+    background : var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    transition: 500ms;
+}
+
+/*website scrool side bar hide*/
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/*html behavior*/
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1);}
+h2 { font-size: var(--fs-h2);}
+h3 { font-size: var(--fs-h3);}
+
+section{
+    padding: 5em 2em;
+    margin-bottom: 1em;
+}
+
+.section__title{
+    margin-bottom: 1em;
+}
+
+/*Introduction*/
+
+.section__title--intro{
+    font-weight: var(--fw-reg);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section__subtitle--detailbox,
+.section__subtitle--about{
+    background-color: var(--clr-recent);
+    font-family: var(--ff-secondary);
+
+}
+
+.intro{
+    color: white;
+    background: var(--clr-dark);
+    text-align: center;
+    height: 80vh;
+    background-image: url(../images/lotustower.jpg);
+    background-position: left 20% bottom 70%;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    margin-bottom: 2em;
+
+    
+
+    /* background-image: url('/src/images/lotustower.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding-top: 350px;
+    padding-bottom: 500px; */
+    
+}
+
+/*navigation bar*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    margin-bottom: 8%;
+    margin-top: -5%;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px 20px;
+    font-size: 15px;
+    transition: 500ms;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--clr-light);
+
+}
+
+nav ul li:hover{
+    transform: scale(1.5);
+}
+
+/*whole buttons use this type of buttons entire website*/
+.btn{
+    display: inline-block;
+    background: var(--clr-recent);
+    color: var(--clr-dark);
+    padding: .5em 1.5em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    border-radius: 5px;
+
+    transition: 500ms;
+
+    margin-bottom: 5px;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+@media (min-width : 800px){
+    .section__subtitle--intro{
+        margin-left: -22%;
+    }
+
+    .btn{
+        margin-top: 3em;
+    }
+}
+
+
+
+
+/*what i do*/
+.mywork{
+    color: var(--clr-light);
+    background: var(--clr-dark);
+    background-image: url(../images/workIdo.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    text-align: center;
+}
+
+.para{
+    text-align: justify;
+}
+
+.section__title--work{
+    color: var(--clr-recent);
+    position: relative;
+}
+
+.section__title--work::after{
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: .5em auto 1em;
+    background: var(--clr-light);
+    opacity: .25;
+}
+
+@media (min-width : 800px){
+    .works{
+        display: flex;
+        margin: 0 auto;
+        max-width: 1000px;
+        margin-bottom: 3em;
+    }
+
+
+    .work + .work {
+        margin-left: 2em;
+    }
+}
+
+
+/*about me*/
+
+.detailbox, 
+.about-me{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width : 800px){
+    .detailbox,
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        grid-template-areas: 
+            "title img"
+            "sub img"
+            "text img"        
+        ;
+        grid-column-gap: 3em;
+    }
+
+    .section__title--detailbox,
+    .section__title--about{
+        grid-area: title;
+    }
+
+    .section__subtitle--detailbox,
+    .section__subtitle--about{
+        grid-area: sub;
+    }
+
+    .detailbox__body,
+    .about-me__body{
+        grid-area: text;
+    }
+
+    .detailbox__img,
+    .about-me__img{
+        grid-area: img;
+        justify-self: end;
+        align-self: center;
+    }
+}
+
+
+/* projects */
+
+.projects{
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__subtitle--project{
+    color: var(--clr-recent);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    margin-bottom: 3em;
+}
+
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
+
+.portfolio__item{
+    /* background: var(--clr-recent); */
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.portfolio__image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    
+    transition: 500ms;
+}
+
+.portfolio__image:hover{
+    background: var(--clr-recent);
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+
+/*contact area is here*/
+.contact{
+    text-align: center;
+    background: var(--clr-dark)
+}
+
+.contact__head{
+    margin-bottom: 2%;
+    color: var(--clr-light);
+}
+
+.x{
+    text-decoration: none;
+    color: var(--clr-light);
+}
+
+.icon{
+    margin: 2%;
+    font-size: 40px;
+    transition: 500ms;
+}
+
+.icon:hover{
+    transform: scale(1.4);
+}
