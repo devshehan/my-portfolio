@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+/* get local font to the webpage */
+
+@font-face {
+    font-family: 'sfmy-regular';
+    src: url('../fonts/SF-Pro-Rounded-Regular.otf');
+}
+
+
 :root{
-    --ff-primary: 'Source Sans Pro', 'sans-serif';
-    --ff-secondary: 'Source Code Pro', 'monospace';
+    --ff-primary: 'sfmy-regular', 'sans-serif';
+    --ff-secondary: 'sfmy-regular', 'monospace';
 
     --fw-reg : 300;
     --fw-bold : 900;
