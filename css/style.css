@@ -4,17 +4,9 @@
     box-sizing: border-box;
 }
 
-/* get local font to the webpage */
-
-@font-face {
-    font-family: 'sfmy-regular';
-    src: url('../fonts/SF-Pro-Rounded-Regular.otf');
-}
-
-
 :root{
-    --ff-primary: 'sfmy-regular', 'sans-serif';
-    --ff-secondary: 'sfmy-regular', 'monospace';
+    --ff-primary: 'Source Sans Pro', 'sans-serif';
+    --ff-secondary: 'Source Code Pro', 'monospace';
 
     --fw-reg : 300;
     --fw-bold : 900;
@@ -255,11 +247,13 @@ nav ul li:hover{
     .section__title--detailbox,
     .section__title--about{
         grid-area: title;
+        margin-bottom: -10px;
     }
 
     .section__subtitle--detailbox,
     .section__subtitle--about{
         grid-area: sub;
+        height: 40%;
     }
 
     .detailbox__body,
